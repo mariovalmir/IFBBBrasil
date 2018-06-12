@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">IFBB Brasil</string>
+    <string name="bodybuilding">Bodybuilding</string>
+    <string name="classic">Clássico</string>
+    <string name="wellness">Wellness</string>
+    <string name="bikini">Bikini</string>
+    <string name="mensPhysique">Men\'s Physique</string>
+    <string name="muscularPhysique">Muscular Physique</string>
+    <string name="womensPhysique">Woman\'s Physique</string>
+</resources>
