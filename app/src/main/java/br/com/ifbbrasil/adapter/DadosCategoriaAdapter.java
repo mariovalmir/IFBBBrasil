@@ -1,6 +1,7 @@
 package br.com.ifbbrasil.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.view.menu.MenuView;
 import android.support.v7.widget.CardView;
@@ -16,6 +17,11 @@ import java.util.List;
 
 import br.com.ifbbrasil.CategoriaEnum;
 import br.com.ifbbrasil.R;
+import br.com.ifbbrasil.activity.DadosCategoriaActivity;
+import br.com.ifbbrasil.activity.DivisoesActivity;
+import br.com.ifbbrasil.util.CategoriaUtil;
+
+import static br.com.ifbbrasil.CategoriaEnum.BODYBUILDING;
 
 public class DadosCategoriaAdapter extends RecyclerView.Adapter<DadosCategoriaAdapter.ViewHolder>{
 
@@ -32,13 +38,11 @@ public class DadosCategoriaAdapter extends RecyclerView.Adapter<DadosCategoriaAd
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         private TextView tvCardRowTipoCategoria;
-        private ConstraintLayout layItemCardView;
         private CardView cardView;
 
         public ViewHolder(View itemView) {
             super(itemView);
             tvCardRowTipoCategoria = (TextView) itemView.findViewById(R.id.tvCardRowTipoCategoria);
-            layItemCardView = (ConstraintLayout) itemView.findViewById(R.id.layItemCardView);
             cardView = (CardView) itemView.findViewById(R.id.cdDadosCategoria);
         }
     }
@@ -58,8 +62,21 @@ public class DadosCategoriaAdapter extends RecyclerView.Adapter<DadosCategoriaAd
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
-                Toast.makeText(context, grupoItem.toString(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(context, DivisoesActivity.class);
+                switch (categoriaEnum){
+                    case BODYBUILDING:
+                        intent.putExtra("dadosCategoria", CategoriaUtil.getBodybuilding());
+                        break;
+                    case BIKINI:
+                    case CLASSICO:
+                    case WELLNESS:
+                    case MENS_PHYSIQUE:
+                    case WOMANS_PHYSIQUE:
+                    case MUSCULAR_PHYSIQUE:
+                        Toast.makeText(context, grupoItem.toString(), Toast.LENGTH_SHORT).show();
+                        break;
+                }
+                context.startActivity(intent);
             }
         });
     }

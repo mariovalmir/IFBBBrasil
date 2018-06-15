@@ -8,7 +8,7 @@ import br.com.ifbbrasil.dto.CategoriaDTO;
 public class CategoriaUtil {
 
 
-    public CategoriaDTO getBodybuilding(){
+    public static CategoriaDTO getBodybuilding(){
         List<String> divisoes = new ArrayList<>();
         divisoes.add("JR");
         divisoes.add("SÊNIOR");

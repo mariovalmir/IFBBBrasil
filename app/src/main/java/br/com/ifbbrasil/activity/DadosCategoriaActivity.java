@@ -26,18 +26,17 @@ public class DadosCategoriaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dados_categoria);
 
-        mRecyclerView = findViewById(R.id.rvDadosCategoria);
+
         categorias = new ArrayList<>();
         categorias.add("Divisões");
         categorias.add("Critérios de Avaliação");
         categorias.add("Rotina de Poses");
         categorias.add("Vestimenta");
-
-        mLayoutManager = new LinearLayoutManager(this);
-        mRecyclerView.setLayoutManager(mLayoutManager);
-
         categoriaEnum = CategoriaEnum.fromCodigo(getIntent().getIntExtra("categoria", 0));
 
+        mRecyclerView = findViewById(R.id.rvDadosCategoria);
+        mLayoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(mLayoutManager);
         mAdapter = new DadosCategoriaAdapter(categorias, categoriaEnum, getBaseContext());
         mRecyclerView.setAdapter(mAdapter);
 

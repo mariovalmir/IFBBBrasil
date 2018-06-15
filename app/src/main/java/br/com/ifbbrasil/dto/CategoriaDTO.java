@@ -1,8 +1,9 @@
 package br.com.ifbbrasil.dto;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class CategoriaDTO {
+public class CategoriaDTO implements Serializable{
     private List<String> divisoes;
     private List<String> pesosAltura;
     private List<String> posesCompulsorias;
