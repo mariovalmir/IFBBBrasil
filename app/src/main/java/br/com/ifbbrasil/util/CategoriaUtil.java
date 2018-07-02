@@ -3,6 +3,7 @@ package br.com.ifbbrasil.util;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.ifbbrasil.R;
 import br.com.ifbbrasil.dto.CategoriaDTO;
 
 public class CategoriaUtil {
@@ -49,12 +50,22 @@ public class CategoriaUtil {
         List<String> vestimentas = new ArrayList<>();
         vestimentas.add("SUNGAS DEVERÃO SER DE COR SÓLIDA E METÁLICAS");
 
+        List<Integer> fotosPosesCompulsorias = new ArrayList<>();
+        fotosPosesCompulsorias.add(R.drawable.bodybuilding);
+        fotosPosesCompulsorias.add(R.drawable.bikini);
+        fotosPosesCompulsorias.add(R.drawable.bodyfitiness);
+        fotosPosesCompulsorias.add(R.drawable.classic);
+        fotosPosesCompulsorias.add(R.drawable.bodybuilding);
+        fotosPosesCompulsorias.add(R.drawable.bodybuilding);
+        fotosPosesCompulsorias.add(R.drawable.mensphysique);
+
         CategoriaDTO categoriaDTO = new CategoriaDTO();
         categoriaDTO.setCriteriosDeAvaliacao(criteriosDeAvaliacao);
         categoriaDTO.setDivisoes(divisoes);
         categoriaDTO.setPesosAltura(pesosAltura);
         categoriaDTO.setPosesCompulsorias(posesCompulsorias);
         categoriaDTO.setVestimentas(vestimentas);
+        categoriaDTO.setFotosPosesCompulsorias(fotosPosesCompulsorias);
 
         return categoriaDTO;
     }

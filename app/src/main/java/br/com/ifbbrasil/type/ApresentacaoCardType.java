@@ -1,4 +1,4 @@
-package type;
+package br.com.ifbbrasil.type;
 
 public class ApresentacaoCardType {
     public String getTitulo() {

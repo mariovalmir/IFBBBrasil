@@ -1,23 +1,17 @@
 package br.com.ifbbrasil.adapter;
 
 import android.content.Context;
-import android.content.Intent;
-import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.List;
 
-import br.com.ifbbrasil.CategoriaEnum;
 import br.com.ifbbrasil.R;
-import br.com.ifbbrasil.activity.DivisoesActivity;
 import br.com.ifbbrasil.dto.CategoriaDTO;
-import br.com.ifbbrasil.util.CategoriaUtil;
 
 public class DivisoesAdapter extends RecyclerView.Adapter<DivisoesAdapter.ViewHolder> {
 
@@ -35,12 +29,11 @@ public class DivisoesAdapter extends RecyclerView.Adapter<DivisoesAdapter.ViewHo
 
         private TextView tvDivisao;
         private TextView tvAltura;
-        private CardView cardView;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            tvDivisao = (TextView) itemView.findViewById(R.id.tvDivisao);
-            tvAltura = (TextView) itemView.findViewById(R.id.tvAltura);
+            tvDivisao = itemView.findViewById(R.id.tvDivisao);
+            tvAltura = itemView.findViewById(R.id.tvAltura);
         }
     }
 

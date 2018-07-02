@@ -8,7 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.ifbbrasil.CategoriaEnum;
+import br.com.ifbbrasil.enums.CategoriaEnum;
 import br.com.ifbbrasil.R;
 import br.com.ifbbrasil.adapter.DadosCategoriaAdapter;
 

@@ -2,26 +2,21 @@ package br.com.ifbbrasil.adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.constraint.ConstraintLayout;
-import android.support.v7.view.menu.MenuView;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.List;
 
-import br.com.ifbbrasil.CategoriaEnum;
+import br.com.ifbbrasil.activity.PosesActivity;
+import br.com.ifbbrasil.enums.CategoriaEnum;
 import br.com.ifbbrasil.R;
-import br.com.ifbbrasil.activity.DadosCategoriaActivity;
 import br.com.ifbbrasil.activity.DivisoesActivity;
 import br.com.ifbbrasil.util.CategoriaUtil;
-
-import static br.com.ifbbrasil.CategoriaEnum.BODYBUILDING;
 
 public class DadosCategoriaAdapter extends RecyclerView.Adapter<DadosCategoriaAdapter.ViewHolder>{
 
@@ -62,7 +57,20 @@ public class DadosCategoriaAdapter extends RecyclerView.Adapter<DadosCategoriaAd
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, DivisoesActivity.class);
+                Intent intent = null;
+                switch (grupoItem){
+                    case "Divisões":
+                        intent = new Intent(context, DivisoesActivity.class);
+                        break;
+                    case "Critérios de Avaliação":
+                        break;
+                    case "Rotina de Poses":
+                        intent = new Intent(context, PosesActivity.class);
+                        break;
+                    case "Vestimenta":
+                        break;
+                }
+
                 switch (categoriaEnum){
                     case BODYBUILDING:
                         intent.putExtra("dadosCategoria", CategoriaUtil.getBodybuilding());

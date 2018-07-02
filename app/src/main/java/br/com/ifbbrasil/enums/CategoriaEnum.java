@@ -1,4 +1,4 @@
-package br.com.ifbbrasil;
+package br.com.ifbbrasil.enums;
 
 public enum CategoriaEnum {
     BODYBUILDING,

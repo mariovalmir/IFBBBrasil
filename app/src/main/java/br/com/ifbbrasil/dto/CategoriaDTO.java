@@ -9,6 +9,15 @@ public class CategoriaDTO implements Serializable{
     private List<String> posesCompulsorias;
     private List<String> criteriosDeAvaliacao;
     private List<String> vestimentas;
+    private List<Integer> fotosPosesCompulsorias;
+
+    public List<Integer> getFotosPosesCompulsorias() {
+        return fotosPosesCompulsorias;
+    }
+
+    public void setFotosPosesCompulsorias(List<Integer> fotosPosesCompulsorias) {
+        this.fotosPosesCompulsorias = fotosPosesCompulsorias;
+    }
 
     public List<String> getDivisoes() {
         return divisoes;

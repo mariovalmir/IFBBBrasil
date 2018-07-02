@@ -1,15 +1,13 @@
 package br.com.ifbbrasil.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import br.com.ifbbrasil.R;
-import br.com.ifbbrasil.adapter.DadosCategoriaAdapter;
 import br.com.ifbbrasil.adapter.DivisoesAdapter;
 import br.com.ifbbrasil.dto.CategoriaDTO;
-import br.com.ifbbrasil.util.CategoriaUtil;
 
 public class DivisoesActivity extends AppCompatActivity {
 

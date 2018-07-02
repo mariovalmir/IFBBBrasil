@@ -8,7 +8,7 @@ import android.widget.ImageView;
 
 import br.com.ifbbrasil.R;
 
-import static br.com.ifbbrasil.CategoriaEnum.BODYBUILDING;
+import static br.com.ifbbrasil.enums.CategoriaEnum.BODYBUILDING;
 
 public class MainActivity extends AppCompatActivity {
 

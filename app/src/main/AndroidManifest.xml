@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.DadosCategoriaActivity" />
-        <activity android:name=".activity.DivisoesActivity"></activity>
+        <activity android:name=".activity.DivisoesActivity" />
+        <activity android:name=".activity.PosesActivity"></activity>
     </application>
 
 </manifest>
