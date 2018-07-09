@@ -18,6 +18,8 @@ import br.com.ifbbrasil.R;
 import br.com.ifbbrasil.activity.DivisoesActivity;
 import br.com.ifbbrasil.util.CategoriaUtil;
 
+import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
+
 public class DadosCategoriaAdapter extends RecyclerView.Adapter<DadosCategoriaAdapter.ViewHolder>{
 
     private Context context;
@@ -84,6 +86,7 @@ public class DadosCategoriaAdapter extends RecyclerView.Adapter<DadosCategoriaAd
                         Toast.makeText(context, grupoItem.toString(), Toast.LENGTH_SHORT).show();
                         break;
                 }
+                intent.addFlags(FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             }
         });
